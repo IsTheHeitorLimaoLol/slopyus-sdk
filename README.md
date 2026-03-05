@@ -1,2 +1,0 @@
-# slopyus-sdk
-Idk bruh
