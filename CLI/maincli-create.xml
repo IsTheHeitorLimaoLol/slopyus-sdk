@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SynthCLI-Create" default="help">
+
+    <property name="synth.sdk.version" value="1.0.0" />
+    <property name="geode.version" value="v2.0.0" />
+    <property name="output.dir" value="./build" />
+
+    <target name="help" description="Display usage information">
+        <echo message="Synth SDK CLI - Project Creation Tool"/>
+        <echo message="Usage: ant -f maincli-create.xml [target]"/>
+        <echo message="Available targets: setup-project, clean, info"/>
+    </target>
+
+    <target name="info">
+        <echo message="Project Name: Synth SDK"/>
+        <echo message="Description: Creator of applications and mods for Geode."/>
+        <echo message="SDK Version: ${synth.sdk.version}"/>
+    </target>
+
+    <target name="setup-project" description="Creates the directory structure for a new Geode mod">
+        <echo message="Initializing new Synth project..."/>
+        
+        <mkdir dir="src"/>
+        <mkdir dir="include"/>
+        <mkdir dir="resources"/>
+        <mkdir dir="${output.dir}"/>
+
+        <echo message="Creating base files..."/>
+        <touch file="src/main.cpp"/>
+        <touch file="mod.json"/>
+
+        <echo message="Project successfully created with Synth CLI."/>
+    </target>
+
+    <target name="clean" description="Removes build artifacts">
+        <delete dir="${output.dir}"/>
+        <echo message="Cleanup complete."/>
+    </target>
+
+</project>
