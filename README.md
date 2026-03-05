@@ -1,6 +1,6 @@
 # main
 <p align="center">
-  <img src=/mischanls_20260305153550.png" alt="Project Logo" width="200">
+  <img src=./mischanls_20260305153550.png" alt="Project Logo" width="200">
 </p>
 # desc
 Meet the synth... CLI!
